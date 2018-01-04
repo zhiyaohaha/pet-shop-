@@ -1,4 +1,4 @@
-<!--  -->
+
 <template>
   <div>classify.vue</div>
 </template>
@@ -14,7 +14,7 @@ export default {
 
   computed: {},
 
-  mounted: {},
+  mounted(){},
 
   methods: {}
 }
