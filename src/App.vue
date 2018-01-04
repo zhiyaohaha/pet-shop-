@@ -1,9 +1,6 @@
 <!-- app -->
 <template>
   <div>
-    <header class="header">
-
-    </header>
     <footer class="footerTab">
       <div class="tabItem">
         <router-link to="/homePage">
@@ -40,6 +37,7 @@
 
 <script>
   import tab from "./components/tab/tab.vue"
+  import {mapState} from "vuex"
   export default {
     data() {
       return {}
@@ -49,9 +47,12 @@
       tab
     },
 
-    computed: {},
+    computed: {
+      ...mapState(["home"])
+    },
 
     mounted(){
+      this.$store.dispatch('getHome')
     },
 
     methods: {}
