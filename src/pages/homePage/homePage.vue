@@ -2,7 +2,7 @@
 <template>
   <div>
     <!--头部-->
-    <header class="homeHeader">
+    <header class="homeHeader" v-if="home">
       <!--头部上-->
       <div class="clearFix">
         <div class="clearFixLeft">
@@ -16,30 +16,52 @@
           <input type="search" placeholder="请输入" class="iconfont icon-sousuo">
         </div>
         <div class="clearFixRight">
-
+          <a href="https://wap.epet.com/wappms/pms.html?fw=0">
+            <img src="//static.epetbar.com/static_web/wap/src/images/mydope.png">
+          </a>
         </div>
       </div>
       <!--头部下-->
       <div class="find_nav">
-
+        <ul class="headerTab" :style="{width:tabLength+'px'}">
+          <li v-for="(menu, index) in home.menus" :key="index"
+              @click="changeColor(index)" :class="{active:isColor}">
+            <a href="###">{{menu.menu_name}}</a>
+          </li>
+        </ul>
       </div>
     </header>
   </div>
 </template>
 <script>
+  import {mapState} from "vuex"
   export default {
     data () {
-      return {};
+      return {
+        isColor:false
+      };
     },
 
-    components: {},
+    components: {
 
-    computed: {},
+    },
+
+    computed: {
+      ...mapState(["home"]),
+
+      tabLength(){
+        return 75*this.home.menus.length
+      }
+    },
 
     mounted(){
     },
 
-    methods: {}
+    methods: {
+      changeColor(index){
+
+      }
+    }
   }
 
 </script>
@@ -51,12 +73,13 @@
     position fixed
     top 0
     left 0
-    //头部上
+  //头部上
     .clearFix
       box-sizing border-box
       width 100%
       height 50px
       padding 5px 10px
+      border-bottom 1px solid #999
       .clearFixLeft
         float left
         font-size 14px
@@ -73,7 +96,7 @@
         text-align center
         line-height 40px
         float left
-        &>input
+        & > input
           background-color #ddd
           width 219px
           height 25px
@@ -83,8 +106,38 @@
           background-repeat no-repeat
           background-size 11px 11px
           background-position center right
-    //头部下
+    //评论logo
+      .clearFixRight
+        float left
+        width 35px
+        height 40px
+        text-align center
+        line-height 50px
+        margin-right 0
+        & > a
+          display block
+          float right
+          width 25px
+          height 25px
+          & > img
+            width 25px
+            height 25px
+  //头部下
     .find_nav
       height 36px
-      background-color #0000ff
+      .headerTab
+        overflow hidden
+        & > li
+          float left
+          width 75px
+          height 36px
+          text-align center
+          line-height 36px
+          //绿色
+          &.active
+            a
+              color #00ee00
+          a
+            font-size 16px
+
 </style>

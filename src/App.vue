@@ -37,7 +37,7 @@
 
 <script>
   import tab from "./components/tab/tab.vue"
-  import {mapState} from "vuex"
+
   export default {
     data() {
       return {}
@@ -48,7 +48,7 @@
     },
 
     computed: {
-      ...mapState(["home"])
+
     },
 
     mounted(){
@@ -73,12 +73,12 @@
       height 100%
       background-color #fff
       text-align center
-      & > a:hover
-        color #00ffff
       & > a
-        font-size 14px
+        font-size 15px
         display: block;
         margin-top: 7px;
+        &.router-link-active
+          color #00ffff
         .iconfont
           font-size 30px
 </style>
