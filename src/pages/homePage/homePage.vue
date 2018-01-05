@@ -35,36 +35,52 @@
 
     <!--小狗-->
     <div class="dog">
-
+      <dog/>
     </div>
     <!--中间-->
-    <div class="homeContent" v-if="home">
-
-      <!--轮播广告-->
-      <div class="slide">
-        <mt-swipe :auto="4000">
-          <mt-swipe-item v-for="(val, index) in home.datas[0].value" :key="index">
-            <a href="###">
-              <img width="100%" height="160px" :src="val.image">
-            </a>
-          </mt-swipe-item>
-        </mt-swipe>
-      </div>
-      <!--栏目菜单-->
-      <div class="column" v-if="home">
-        <ul>
-          <li v-for="(menu, index) in home.datas[1].menus">
-            <a href="###">
-              <img :src="menu.image">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--小灰线-->
+    <div class="homeContent" ref="homeContent" v-if="home">
       <div>
-        <split />
+        <!--轮播广告-->
+        <div class="slide">
+          <mt-swipe :auto="4000">
+            <mt-swipe-item v-for="(val, index) in home.datas[0].value" :key="index">
+              <a href="###">
+                <img width="100%" height="160px" :src="val.image">
+              </a>
+            </mt-swipe-item>
+          </mt-swipe>
+        </div>
+        <!--栏目菜单-->
+        <div class="column" v-if="home">
+          <ul>
+            <li v-for="(menu, index) in home.datas[1].menus">
+              <a href="###">
+                <img :src="menu.image">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--小灰线-->
+        <div>
+          <split />
+        </div>
+        <!--广告-->
+        <div class="advertisingWrap">
+          <div class="advertising">
+            <a href="###">
+              <img :src="home.datas[5].image">
+            </a>
+          </div>
+        </div>
+        <!--小灰线-->
+        <div>
+          <split />
+        </div>
+        <!--每日疯抢-->
+        <div class="everydayInsane">
+          <everydayInsane />
+        </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -72,6 +88,8 @@
   import {mapState} from "vuex"
   import BScroll from "better-scroll"
   import split from "../../components/split/split.vue"
+  import dog from "../../components/dog/dog.vue"
+  import everydayInsane from "../../components/everydayInsane/everydayInsane.vue"
   export default {
     data () {
       return {
@@ -81,7 +99,9 @@
     },
 
     components: {
-      split
+      split,
+      dog,
+      everydayInsane
     },
 
     computed: {
@@ -98,6 +118,7 @@
       this.$store.dispatch('getHome',()=>{
         this.$nextTick(()=>{
           new BScroll(this.$refs.menuWrapper,{scrollX: true, click: true,})
+          new BScroll(this.$refs.homeContent,{click: true})
         })
       })
     },
@@ -120,6 +141,8 @@
     position fixed
     top 0
     left 0
+    background-color #fff
+    z-index  20
   /*头部上*/
     .clearFix
       box-sizing border-box
@@ -200,17 +223,18 @@
     height 46px
     bottom 100px
     right 0
+    z-index 10
   /*内容区*/
   .homeContent
     position absolute
     width 100%
-    height 160px
+    height 100%
     top 87px
     left 0
     /*轮播*/
     .slide
       width 100%
-      height 100%
+      height 160px
       &>div
         width 100%
         height 100%
@@ -222,6 +246,15 @@
         float left
         width 20%
         height 95px
+        img
+          width 100%
+          height 100%
+    .advertisingWrap
+      width 100%
+      height 120px
+      .advertising
+        width 100%
+        height 100%
         img
           width 100%
           height 100%

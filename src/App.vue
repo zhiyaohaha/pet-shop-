@@ -1,6 +1,7 @@
 <!-- app -->
 <template>
   <div>
+    <router-view/>
     <footer class="footerTab">
       <div class="tabItem">
         <router-link to="/homePage">
@@ -31,7 +32,6 @@
         </router-link>
       </div>
     </footer>
-    <router-view/>
   </div>
 </template>
 
@@ -65,6 +65,7 @@
     position fixed
     bottom 0
     left 0
+    z-index 10
     .tabItem
       float left
       width 25%
