@@ -257,14 +257,6 @@
       ]
     },
     {
-      "index": "2457",
-      "is_show": 0,
-      "type": "1",
-      "is_dynamic": "0",
-      "type_name": "图片轮播广告",
-      "value": []
-    },
-    {
       "index": "3047",
       "is_show": 1,
       "type": "3",
@@ -365,164 +357,6 @@
       ]
     },
     {
-      "index": "3048",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
-      "index": "2438",
-      "is_show": 1,
-      "type": "1",
-      "is_dynamic": "1",
-      "type_name": "图片轮播广告"
-    },
-    {
-      "index": "3",
-      "is_show": 1,
-      "type": "8",
-      "is_dynamic": "1",
-      "type_name": "天天惊喜模板"
-    },
-    {
-      "index": "2933",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
-      "index": "2936",
-      "is_show": 1,
-      "type": "13",
-      "is_dynamic": "0",
-      "type_name": "通用广告模板",
-      "left_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "center_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "right_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "show_line": "0",
-      "content_images": [
-        [
-          {
-            "advid": "25330",
-            "atid": "0",
-            "image": "https://img2.epetbar.com/nowater/2017-12/29/09/40a34e523895d1768bbc82b7e3968290.jpg@!water",
-            "img_size": "750x370",
-            "target": {
-              "mode": "web",
-              "param": "https://wap.epet.com/group/v226/main.html?pettype=dog&pet_type=dog"
-            }
-          }
-        ]
-      ]
-    },
-    {
-      "index": "2939",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
-      "index": "2938",
-      "is_show": 1,
-      "type": "13",
-      "is_dynamic": "0",
-      "type_name": "通用广告模板",
-      "left_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "center_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "right_image": {
-        "image": "",
-        "img_size": "",
-        "target": {}
-      },
-      "show_line": "0",
-      "content_images": [
-        [
-          {
-            "advid": "25133",
-            "atid": "0",
-            "image": "https://img2.epetbar.com/nowater/2017-12/13/09/1ec9379f83eb421db9a09195c9594e29.jpg@!water",
-            "img_size": "376x500",
-            "target": {
-              "mode": "web",
-              "param": "http://wap.epetht.com/guide.html?pet_type=dog&fw=0"
-            }
-          }
-        ],
-        [
-          {
-            "advid": "25525",
-            "atid": "0",
-            "image": "https://img2.epetbar.com/nowater/2018-01/03/19/94c7d7ed6bee9f37568a817e1fd603b7.jpg@!water",
-            "img_size": "374x250",
-            "target": {
-              "mode": "web",
-              "param": "https://sale.epet.com/m/mould/fashion/detail.html?id=57"
-            }
-          },
-          {
-            "advid": "25510",
-            "atid": "0",
-            "image": "https://img2.epetbar.com/nowater/2018-01/03/09/09b0bbb0f7f5e69a25f8d04bce431b1c.jpg@!water",
-            "img_size": "374x250",
-            "target": {
-              "mode": "web",
-              "param": "https://wap.epet.com/petschool/SchoolDetail.html?aid=209"
-            }
-          }
-        ]
-      ]
-    },
-    {
-      "index": "15",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "2139",
       "is_show": 1,
       "type": "21",
@@ -611,18 +445,6 @@
       ]
     },
     {
-      "index": "2118",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "1356",
       "is_show": 1,
       "type": "21",
@@ -689,18 +511,6 @@
       ]
     },
     {
-      "index": "3073",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "3053",
       "is_show": 1,
       "type": "13",
@@ -736,18 +546,6 @@
           }
         ]
       ]
-    },
-    {
-      "index": "3054",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "3010",
@@ -787,18 +585,6 @@
       ]
     },
     {
-      "index": "2955",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "2956",
       "is_show": 1,
       "type": "13",
@@ -834,18 +620,6 @@
           }
         ]
       ]
-    },
-    {
-      "index": "2959",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "2983",
@@ -885,18 +659,6 @@
       ]
     },
     {
-      "index": "3045",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "2985",
       "is_show": 1,
       "type": "13",
@@ -932,18 +694,6 @@
           }
         ]
       ]
-    },
-    {
-      "index": "2984",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "3044",
@@ -983,18 +733,6 @@
       ]
     },
     {
-      "index": "3077",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "3055",
       "is_show": 1,
       "type": "13",
@@ -1030,18 +768,6 @@
           }
         ]
       ]
-    },
-    {
-      "index": "3081",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "3070",
@@ -1081,18 +807,6 @@
       ]
     },
     {
-      "index": "3075",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "2996",
       "is_show": 1,
       "type": "13",
@@ -1128,18 +842,6 @@
           }
         ]
       ]
-    },
-    {
-      "index": "3069",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "1348",
@@ -1226,18 +928,6 @@
           }
         }
       ]
-    },
-    {
-      "index": "1423",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "2942",
@@ -1328,18 +1018,6 @@
       ]
     },
     {
-      "index": "2979",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
-    },
-    {
       "index": "2943",
       "is_show": 1,
       "type": "21",
@@ -1426,18 +1104,6 @@
           }
         }
       ]
-    },
-    {
-      "index": "2949",
-      "is_show": 1,
-      "type": "100",
-      "is_dynamic": "0",
-      "type_name": "模块分割线",
-      "value": {
-        "image": "",
-        "img_size": "750x25",
-        "target": {}
-      }
     },
     {
       "index": "2948",

@@ -22,55 +22,105 @@
         </div>
       </div>
       <!--头部下-->
-      <div class="find_nav">
-        <ul class="headerTab" :style="{width:tabLength+'px'}">
-          <li v-for="(menu, index) in home.menus" :key="index">
-            <a href="###" :class="{'active':menuIsColor}">{{menu.menu_name}}</a>
-            <span></span>
+      <div class="find_nav" ref="menuWrapper">
+        <ul v-if="home" class="headerTab" :style="{width:tabLength+'px'}">
+          <li v-for="(menu, index) in home.menus" :key="index" @click="optChange(index)">
+            <a href="###" :class="{active:menuIndex === index}">{{menu.menu_name}}</a>
+            <span v-show="menuIndex === index"
+                  :style="{'width':greenAcross+'px','left':smallGreenLength+'px'}"></span>
           </li>
         </ul>
       </div>
     </header>
+
+    <!--小狗-->
+    <div class="dog">
+
+    </div>
+    <!--中间-->
+    <div class="homeContent" v-if="home">
+
+      <!--轮播广告-->
+      <div class="slide">
+        <mt-swipe :auto="4000">
+          <mt-swipe-item v-for="(val, index) in home.datas[0].value" :key="index">
+            <a href="###">
+              <img width="100%" height="160px" :src="val.image">
+            </a>
+          </mt-swipe-item>
+        </mt-swipe>
+      </div>
+      <!--栏目菜单-->
+      <div class="column" v-if="home">
+        <ul>
+          <li v-for="(menu, index) in home.datas[1].menus">
+            <a href="###">
+              <img :src="menu.image">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--小灰线-->
+      <div>
+        <split />
+      </div>
+
+    </div>
   </div>
 </template>
 <script>
   import {mapState} from "vuex"
+  import BScroll from "better-scroll"
+  import split from "../../components/split/split.vue"
   export default {
     data () {
       return {
-        isColor: false
+        menuIndex: 0,
+        greenAcross: 28,
       };
     },
 
-    components: {},
+    components: {
+      split
+    },
 
     computed: {
       ...mapState(["home"]),
-
       tabLength(){
         return 75 * this.home.menus.length
       },
-      menuIsColor(){
-        return
+      smallGreenLength(){
+        return (75 - this.greenAcross) / 2
       }
     },
 
     mounted(){
+      this.$store.dispatch('getHome',()=>{
+        this.$nextTick(()=>{
+          new BScroll(this.$refs.menuWrapper,{scrollX: true, click: true,})
+        })
+      })
     },
 
-    methods: {}
+    methods: {
+      optChange(index){
+        let num = this.home.menus[index].menu_name.length;
+        this.greenAcross = 14 * num
+        this.menuIndex = index
+      }
+    }
   }
 
 </script>
 <style lang='stylus' rel="stylesheet/stylus">
-  //头部
+  /*头部*/
   .homeHeader
     width 100%
     height 86px
     position fixed
     top 0
     left 0
-  //头部上
+  /*头部上*/
     .clearFix
       box-sizing border-box
       width 100%
@@ -119,8 +169,9 @@
           & > img
             width 25px
             height 25px
-  //头部下
+  /*头部下*/
     .find_nav
+      width 100%
       height 36px
       .headerTab
         overflow hidden
@@ -130,9 +181,48 @@
           height 36px
           text-align center
           line-height 36px
+          position relative
           /*绿色*/
           & > a
             font-size 14px
             &.active
               color #00ff00
+          /*小绿杠*/
+          & > span
+            display block
+            height 1px
+            background-color #00ff00
+            position absolute
+            bottom 0
+  .dog
+    position fixed
+    width 41px
+    height 46px
+    bottom 100px
+    right 0
+  /*内容区*/
+  .homeContent
+    position absolute
+    width 100%
+    height 160px
+    top 87px
+    left 0
+    /*轮播*/
+    .slide
+      width 100%
+      height 100%
+      &>div
+        width 100%
+        height 100%
+    .column
+      width 100%
+      height 190px
+      overflow hidden
+      li
+        float left
+        width 20%
+        height 95px
+        img
+          width 100%
+          height 100%
 </style>

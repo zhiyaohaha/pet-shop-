@@ -36,15 +36,13 @@
 </template>
 
 <script>
-  import tab from "./components/tab/tab.vue"
-
   export default {
     data() {
       return {}
     },
 
     components: {
-      tab
+
     },
 
     computed: {
@@ -52,7 +50,7 @@
     },
 
     mounted(){
-      this.$store.dispatch('getHome')
+
     },
 
     methods: {}
