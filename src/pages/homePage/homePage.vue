@@ -6,11 +6,11 @@
       <!--头部上-->
       <div class="clearFix">
         <div class="clearFixLeft">
-          <a href="https://wap.epet.com/place.html?pet_type=dog&fw=0">
+          <router-link to="/dog">
             <span>狗狗站|</span>
             <span>成都</span>
             <i class="iconfont icon-daosanjiao"></i>
-          </a>
+          </router-link>
         </div>
         <div class="clearFixMiddle">
           <input type="search" placeholder="请输入" class="iconfont icon-sousuo">
@@ -24,9 +24,9 @@
       <!--头部下-->
       <div class="find_nav">
         <ul class="headerTab" :style="{width:tabLength+'px'}">
-          <li v-for="(menu, index) in home.menus" :key="index"
-              @click="changeColor(index)" :class="{active:isColor}">
-            <a href="###">{{menu.menu_name}}</a>
+          <li v-for="(menu, index) in home.menus" :key="index">
+            <a href="###" :class="{'active':menuIsColor}">{{menu.menu_name}}</a>
+            <span></span>
           </li>
         </ul>
       </div>
@@ -38,30 +38,27 @@
   export default {
     data () {
       return {
-        isColor:false
+        isColor: false
       };
     },
 
-    components: {
-
-    },
+    components: {},
 
     computed: {
       ...mapState(["home"]),
 
       tabLength(){
-        return 75*this.home.menus.length
+        return 75 * this.home.menus.length
+      },
+      menuIsColor(){
+        return
       }
     },
 
     mounted(){
     },
 
-    methods: {
-      changeColor(index){
-
-      }
-    }
+    methods: {}
   }
 
 </script>
@@ -133,11 +130,9 @@
           height 36px
           text-align center
           line-height 36px
-          //绿色
-          &.active
-            a
-              color #00ee00
-          a
-            font-size 16px
-
+          /*绿色*/
+          & > a
+            font-size 14px
+            &.active
+              color #00ff00
 </style>
