@@ -122,10 +122,9 @@
         })
       })
     },
-
     methods: {
       optChange(index){
-        let num = this.home.menus[index].menu_name.length;
+        let num = this.home.menus[index].menu_name.length
         this.greenAcross = 14 * num
         this.menuIndex = index
       }
