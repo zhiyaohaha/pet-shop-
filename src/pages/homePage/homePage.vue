@@ -13,6 +13,10 @@
           </router-link>
         </div>
         <div class="clearFixMiddle">
+          <!--<mt-search-->
+            <!--v-model="value" class="search"-->
+            <!--cancel-text="取消" placeholder="搜索">-->
+          <!--</mt-search>-->
           <input type="search" placeholder="请输入" class="iconfont icon-sousuo">
         </div>
         <div class="clearFixRight">
@@ -62,7 +66,7 @@
         </div>
         <!--小灰线-->
         <div>
-          <split />
+          <split/>
         </div>
         <!--广告-->
         <div class="advertisingWrap">
@@ -74,11 +78,11 @@
         </div>
         <!--小灰线-->
         <div>
-          <split />
+          <split/>
         </div>
         <!--每日疯抢-->
         <div class="everydayInsane">
-          <everydayInsane />
+          <everydayInsane/>
         </div>
       </div>
     </div>
@@ -95,6 +99,7 @@
       return {
         menuIndex: 0,
         greenAcross: 28,
+        value: ""
       };
     },
 
@@ -115,10 +120,10 @@
     },
 
     mounted(){
-      this.$store.dispatch('getHome',()=>{
-        this.$nextTick(()=>{
-          new BScroll(this.$refs.menuWrapper,{scrollX: true, click: true,})
-          new BScroll(this.$refs.homeContent,{click: true})
+      this.$store.dispatch('getHome', () => {
+        this.$nextTick(() => {
+          new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
+          new BScroll(this.$refs.homeContent, {click: true})
         })
       })
     },
@@ -141,8 +146,8 @@
     top 0
     left 0
     background-color #fff
-    z-index  20
-  /*头部上*/
+    z-index 20
+    /*头部上*/
     .clearFix
       box-sizing border-box
       width 100%
@@ -165,7 +170,7 @@
         text-align center
         line-height 40px
         float left
-        & > input
+        &>input
           background-color #ddd
           width 219px
           height 25px
@@ -175,7 +180,7 @@
           background-repeat no-repeat
           background-size 11px 11px
           background-position center right
-    //评论logo
+        /*评论logo*/
       .clearFixRight
         float left
         width 35px
@@ -191,7 +196,7 @@
           & > img
             width 25px
             height 25px
-  /*头部下*/
+    /*头部下*/
     .find_nav
       width 100%
       height 36px
@@ -216,6 +221,7 @@
             background-color #00ff00
             position absolute
             bottom 0
+
   .dog
     position fixed
     width 41px
@@ -223,6 +229,7 @@
     bottom 100px
     right 0
     z-index 10
+
   /*内容区*/
   .homeContent
     position absolute
@@ -234,7 +241,7 @@
     .slide
       width 100%
       height 160px
-      &>div
+      & > div
         width 100%
         height 100%
     .column
