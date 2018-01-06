@@ -14,8 +14,8 @@
         </div>
         <div class="clearFixMiddle">
           <!--<mt-search-->
-            <!--v-model="value" class="search"-->
-            <!--cancel-text="取消" placeholder="搜索">-->
+          <!--v-model="value" class="search"-->
+          <!--cancel-text="取消" placeholder="搜索">-->
           <!--</mt-search>-->
           <input type="search" placeholder="请输入" class="iconfont icon-sousuo">
         </div>
@@ -84,8 +84,19 @@
         <div class="everydayInsane">
           <everydayInsane/>
         </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
+        <!--潮品视屏-->
+        <div class="fashion">
+
+        </div>
+        <!--底下-->
+        <div class="stanceFooter"></div>
       </div>
     </div>
+
   </div>
 </template>
 <script>
@@ -122,10 +133,15 @@
     mounted(){
       this.$store.dispatch('getHome', () => {
         this.$nextTick(() => {
-          new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
-          new BScroll(this.$refs.homeContent, {click: true})
+          this.menuWrapper = new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
+          this.homeContent = new BScroll(this.$refs.homeContent, {click: true})
+          this.homeContent.refresh()
+          this.menuWrapper.refresh()
         })
       })
+    },
+    updated(){
+
     },
     methods: {
       optChange(index){
@@ -170,7 +186,7 @@
         text-align center
         line-height 40px
         float left
-        &>input
+        & > input
           background-color #ddd
           width 219px
           height 25px
@@ -180,7 +196,7 @@
           background-repeat no-repeat
           background-size 11px 11px
           background-position center right
-        /*评论logo*/
+      /*评论logo*/
       .clearFixRight
         float left
         width 35px
@@ -264,4 +280,7 @@
         img
           width 100%
           height 100%
+    .stanceFooter
+      width 100%
+      height 145px
 </style>
