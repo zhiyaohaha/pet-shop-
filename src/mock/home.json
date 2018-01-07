@@ -257,7 +257,7 @@
       ]
     },
     {
-      "index": "3047",
+      "index": "2",
       "is_show": 1,
       "type": "3",
       "is_dynamic": "0",
@@ -357,7 +357,7 @@
       ]
     },
     {
-      "index": "2139",
+      "index": "3",
       "is_show": 1,
       "type": "21",
       "is_dynamic": "0",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "index": "2117",
+      "index": "4",
       "is_show": 1,
       "type": "104",
       "is_dynamic": "0",
@@ -443,7 +443,7 @@
       }
     },
     {
-      "index": "3",
+      "index": "5",
       "is_show": 1,
       "type": "8",
       "is_dynamic": "1",
@@ -684,20 +684,16 @@
         "target": {}
       },
       "show_line": "0",
-      "content_images": [
-        [
-          {
-            "advid": "25429",
-            "atid": "0",
-            "image": "https://img2.epetbar.com/nowater/2017-12/28/11/a5ea5be504160ec4694898dbe96bfb1a.jpg@!water",
-            "img_size": "750x320",
-            "target": {
-              "mode": "web",
-              "param": "http://sale.epet.com/m/mould/activity/ztMzYzNA%3D%3D.html?tid=3634"
-            }
-          }
-        ]
-      ]
+      "content_images": {
+        "advid": "25429",
+        "atid": "0",
+        "image": "https://img2.epetbar.com/nowater/2017-12/28/11/a5ea5be504160ec4694898dbe96bfb1a.jpg@!water",
+        "img_size": "750x320",
+        "target": {
+          "mode": "web",
+          "param": "http://sale.epet.com/m/mould/activity/ztMzYzNA%3D%3D.html?tid=3634"
+        }
+      }
     },
     {
       "index": "3010",
@@ -721,20 +717,16 @@
         "target": {}
       },
       "show_line": "0",
-      "content_images": [
-        [
-          {
-            "advid": "25514",
-            "atid": "17960",
-            "image": "https://img2.epetbar.com/nowater/2018-01/03/10/5e90cb256f4aea5f9028d0c73db72185.jpg@!water",
-            "img_size": "750x320",
-            "target": {
-              "mode": "web",
-              "param": "http://sale.epet.com/m/mould/activity/ztMzIyNQ%3D%3D.html?tid=3225"
-            }
-          }
-        ]
-      ]
+      "content_images": {
+        "advid": "25514",
+        "atid": "17960",
+        "image": "https://img2.epetbar.com/nowater/2018-01/03/10/5e90cb256f4aea5f9028d0c73db72185.jpg@!water",
+        "img_size": "750x320",
+        "target": {
+          "mode": "web",
+          "param": "http://sale.epet.com/m/mould/activity/ztMzIyNQ%3D%3D.html?tid=3225"
+        }
+      }
     },
     {
       "index": "2956",
@@ -758,20 +750,16 @@
         "target": {}
       },
       "show_line": "0",
-      "content_images": [
-        [
-          {
-            "advid": "25513",
-            "atid": "17955",
-            "image": "https://img2.epetbar.com/nowater/2018-01/03/10/b4490f8f636d194bbeb5b47332b4bf18.png@!water",
-            "img_size": "750x320",
-            "target": {
-              "mode": "web",
-              "param": "http://sale.epet.com/m/mould/activity/ztMzIyMA%3D%3D.html?tid=3220"
-            }
-          }
-        ]
-      ]
+      "content_images": {
+        "advid": "25513",
+        "atid": "17955",
+        "image": "https://img2.epetbar.com/nowater/2018-01/03/10/b4490f8f636d194bbeb5b47332b4bf18.png@!water",
+        "img_size": "750x320",
+        "target": {
+          "mode": "web",
+          "param": "http://sale.epet.com/m/mould/activity/ztMzIyMA%3D%3D.html?tid=3220"
+        }
+      }
     },
     {
       "index": "2983",
@@ -1000,7 +988,7 @@
       "is_show": 1,
       "type": "21",
       "is_dynamic": "0",
-      "type_name": "自定义Title模板",
+      "type_name": "体验馆",
       "value": {
         "title_height": "110",
         "top_line": {
@@ -1086,7 +1074,7 @@
       "is_show": 1,
       "type": "21",
       "is_dynamic": "0",
-      "type_name": "自定义Title模板",
+      "type_name": "萌宠说",
       "value": {
         "title_height": "110",
         "top_line": {
@@ -1134,40 +1122,38 @@
       "type": "104",
       "is_dynamic": "0",
       "type_name": "首页视频列表",
-      "value": [
-        {
-          "vid": "114",
-          "title": "第1期-狗为什么会互相闻菊花？",
-          "time": "02:15",
-          "video_size": "15.85",
-          "link": "http://player.epetbar.com/11d1f4ac97e54ffe8fad18c496696a1f/edafe7c5e932419787cce9350af66d17-5287d2089db37e62345123a1be272f8b.mp4",
-          "visit": 52366,
-          "visit_img": {
-            "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
-            "img_size": "30x25"
-          },
-          "cover": {
+      "value": {
+        "vid": "114",
+        "title": "第1期-狗为什么会互相闻菊花？",
+        "time": "02:15",
+        "video_size": "15.85",
+        "link": "http://player.epetbar.com/11d1f4ac97e54ffe8fad18c496696a1f/edafe7c5e932419787cce9350af66d17-5287d2089db37e62345123a1be272f8b.mp4",
+        "visit": 52366,
+        "visit_img": {
+          "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
+          "img_size": "30x25"
+        },
+        "cover": {
+          "image": "https://img1.epetbar.com/2017-12/13/13/a2ed53eb150b5145f9d493c55fd925e5.jpg@!water",
+          "img_size": "750X421"
+        },
+        "cateid": "26",
+        "target": {
+          "epet_site": "epet",
+          "mode": "chao_video",
+          "param": "114"
+        },
+        "share_target": {
+          "mode": "shareto",
+          "param": {
+            "title": "第1期-狗为什么会互相闻菊花？",
+            "content": "品质养宠·尽在E宠",
+            "url": "https://wap.epet.com/article/video/View.html?vid=114&fw=0",
             "image": "https://img1.epetbar.com/2017-12/13/13/a2ed53eb150b5145f9d493c55fd925e5.jpg@!water",
-            "img_size": "750X421"
-          },
-          "cateid": "26",
-          "target": {
-            "epet_site": "epet",
-            "mode": "chao_video",
-            "param": "114"
-          },
-          "share_target": {
-            "mode": "shareto",
-            "param": {
-              "title": "第1期-狗为什么会互相闻菊花？",
-              "content": "品质养宠·尽在E宠",
-              "url": "https://wap.epet.com/article/video/View.html?vid=114&fw=0",
-              "image": "https://img1.epetbar.com/2017-12/13/13/a2ed53eb150b5145f9d493c55fd925e5.jpg@!water",
-              "types": "weixin,weixin_ring,qq,qzone,sina"
-            }
+            "types": "weixin,weixin_ring,qq,qzone,sina"
           }
         }
-      ]
+      }
     },
     {
       "index": "2943",
@@ -1222,40 +1208,38 @@
       "type": "104",
       "is_dynamic": "0",
       "type_name": "首页视频列表",
-      "value": [
-        {
-          "vid": "129",
-          "title": "E宠内部禁播视频——设计师篇",
-          "time": "00:41",
-          "video_size": "4.55",
-          "link": "http://player.epetbar.com/0eadfd59bff741f6b7e6a34750b65aef/a0b00d725ef843ce8288e60779de6e66-5287d2089db37e62345123a1be272f8b.mp4",
-          "visit": 18814,
-          "visit_img": {
-            "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
-            "img_size": "30x25"
-          },
-          "cover": {
+      "value": {
+        "vid": "129",
+        "title": "E宠内部禁播视频——设计师篇",
+        "time": "00:41",
+        "video_size": "4.55",
+        "link": "http://player.epetbar.com/0eadfd59bff741f6b7e6a34750b65aef/a0b00d725ef843ce8288e60779de6e66-5287d2089db37e62345123a1be272f8b.mp4",
+        "visit": 18814,
+        "visit_img": {
+          "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
+          "img_size": "30x25"
+        },
+        "cover": {
+          "image": "https://img1.epetbar.com/2017-12/22/13/0a5883cbbc7ecb8856da7d88fc84aa66.png@!water",
+          "img_size": "750X421"
+        },
+        "cateid": "27",
+        "target": {
+          "epet_site": "epet",
+          "mode": "chao_video",
+          "param": "129"
+        },
+        "share_target": {
+          "mode": "shareto",
+          "param": {
+            "title": "E宠内部禁播视频——设计师篇",
+            "content": "品质养宠·尽在E宠",
+            "url": "https://wap.epet.com/article/video/View.html?vid=129&fw=0",
             "image": "https://img1.epetbar.com/2017-12/22/13/0a5883cbbc7ecb8856da7d88fc84aa66.png@!water",
-            "img_size": "750X421"
-          },
-          "cateid": "27",
-          "target": {
-            "epet_site": "epet",
-            "mode": "chao_video",
-            "param": "129"
-          },
-          "share_target": {
-            "mode": "shareto",
-            "param": {
-              "title": "E宠内部禁播视频——设计师篇",
-              "content": "品质养宠·尽在E宠",
-              "url": "https://wap.epet.com/article/video/View.html?vid=129&fw=0",
-              "image": "https://img1.epetbar.com/2017-12/22/13/0a5883cbbc7ecb8856da7d88fc84aa66.png@!water",
-              "types": "weixin,weixin_ring,qq,qzone,sina"
-            }
+            "types": "weixin,weixin_ring,qq,qzone,sina"
           }
         }
-      ]
+      }
     },
     {
       "index": "2948",

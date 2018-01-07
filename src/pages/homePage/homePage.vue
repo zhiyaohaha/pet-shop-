@@ -90,23 +90,88 @@
         </div>
         <!--潮品视屏-->
         <div class="fashion">
-          <div class="fashionHeader">
-            <div class="leftFashion">
-              <img :src="home.datas[2].value.left.img.image">
+          <videoMod :letfImg="home.datas[2].value.left.img.image"
+                    :rightImg="home.datas[2].value.right.img.image"
+                    :videoSrc="home.datas[3]"/>
+        </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
+        <!--品牌特卖-->
+        <div class="brandSell">
+          <videoMod :letfImg="home.datas[6].value.left.img.image"
+                    :rightImg="home.datas[6].value.right.img.image"
+                    :advertisingImgs="[
+                        home.datas[7].content_images.image,
+                        home.datas[8].content_images.image,
+                        home.datas[9].content_images.image
+                    ]"
+          />
+        </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
+        <!--体验馆-->
+        <div class="experience">
+          <div class="experienceHeader">
+            <div class="leftExperience">
+              <img :src="home.datas[16].value.left.img.image">
             </div>
-            <div class="rightFashion">
+            <div class="rightExperience">
               <a href="###">
-                <img :src="home.datas[2].value.right.img.image">
+                <img :src="home.datas[16].value.right.img.image">
               </a>
             </div>
           </div>
-          <div class="fashionVideo">
-            <!--视屏-->
-            <videoMod :poster="home.datas[3].value.cover.image" :src="home.datas[3].value.link" />
+          <!--轮播广告-->
+          <div class="experienceSlide">
+            <mt-swipe :auto="4000">
+              <mt-swipe-item v-for="(val, index) in home.datas[17].value" :key="index">
+                <a href="###">
+                  <img width="100%" height="160px" :src="val.image">
+                </a>
+              </mt-swipe-item>
+            </mt-swipe>
           </div>
         </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
+        <div class="lovelinessPet">
+          <videoMod :letfImg="home.datas[18].value.left.img.image"
+                    :rightImg="home.datas[18].value.right.img.image"
+                    :videoSrc="home.datas[19]"/>
+        </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
+        <div class="theater">
+          <videoMod :letfImg="home.datas[20].value.left.img.image"
+                    :rightImg="home.datas[20].value.right.img.image"
+                    :videoSrc="home.datas[21]"/>
+        </div>
+        <!--小灰线-->
+        <div>
+          <split/>
+        </div>
         <!--底下-->
-        <div class="stanceFooter"></div>
+        <footer class="homeContentFooter">
+          <div class="ft">
+            <span class="bt" title="触屏版">触屏版</span>
+            <span><a href="https://wap.epet.com/app.html">手机客户端</a></span>
+            <span><a href="https://wap.epet.com/AboutEpet.html">关于我们</a></span>
+            <span><a href="https://wap.epet.com/faq.html">联系我们</a></span>
+          </div>
+          <div style="text-align:center;margin:0 10px 0 10px; padding-bottom:25px; font-size:12px">© wap.epet.com 版权：孛志尧</div>
+        </footer>
+        <!--占位-->
+        <div class="stanceFooter">
+
+        </div>
       </div>
     </div>
 
@@ -146,6 +211,7 @@
 
     mounted(){
 //        发请求 和 滑动
+
       this.$store.dispatch('getHome', () => {
         this.$nextTick(() => {
           this.menuWrapper = new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
@@ -154,9 +220,6 @@
           this.menuWrapper.refresh()
         })
       })
-    },
-    updated(){
-
     },
     methods: {
 //     绿杠长度 确定点击事件
@@ -298,19 +361,35 @@
           height 100%
     .fashion
       width 100%
-      height 357px
-      .fashionHeader
+      height 365px
+      margin-bottom 10px
+    .lovelinessPet
+      width 100%
+      height 365px
+      margin-bottom 10px
+    .theater
+      width 100%
+      height 365px
+      margin-bottom 10px
+    .brandSell
+      width 100%
+      margin-bottom 10px
+    .experience
+      width 100%
+      height 365px
+      margin-bottom 10px
+      .experienceHeader
         padding-top 10px
         padding-bottom 5px
         box-sizing border-box
         overflow hidden
         width 100%
         height height 88px
-        .leftFashion
+        .leftExperience
           float left
           img
             width 187.5px
-        .rightFashion
+        .rightExperience
           float right
           width 120px
           height 55px
@@ -319,11 +398,18 @@
             margin-right 0
             width 60px
             height 55px
-      .fashionVideo
-        position relative
+      .experienceSlide
         width 100%
-        height 211px
+        height 160px
+        img
+          width 100%
+    .homeContentFooter
+      width 100%
+      height 86px
+      .ft
+        padding 15px 0 5px
+        text-align center
     .stanceFooter
       width 100%
-      height 145px
+      height 150px
 </style>
