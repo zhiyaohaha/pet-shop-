@@ -90,7 +90,20 @@
         </div>
         <!--潮品视屏-->
         <div class="fashion">
-
+          <div class="fashionHeader">
+            <div class="leftFashion">
+              <img :src="home.datas[2].value.left.img.image">
+            </div>
+            <div class="rightFashion">
+              <a href="###">
+                <img :src="home.datas[2].value.right.img.image">
+              </a>
+            </div>
+          </div>
+          <div class="fashionVideo">
+            <!--视屏-->
+            <videoMod :poster="home.datas[3].value.cover.image" :src="home.datas[3].value.link" />
+          </div>
         </div>
         <!--底下-->
         <div class="stanceFooter"></div>
@@ -105,19 +118,20 @@
   import split from "../../components/split/split.vue"
   import dog from "../../components/dog/dog.vue"
   import everydayInsane from "../../components/everydayInsane/everydayInsane.vue"
+  import videoMod from "../../components/videoMod/videoMod.vue"
   export default {
     data () {
       return {
         menuIndex: 0,
         greenAcross: 28,
-        value: ""
       };
     },
 
     components: {
       split,
       dog,
-      everydayInsane
+      everydayInsane,
+      videoMod
     },
 
     computed: {
@@ -131,6 +145,7 @@
     },
 
     mounted(){
+//        发请求 和 滑动
       this.$store.dispatch('getHome', () => {
         this.$nextTick(() => {
           this.menuWrapper = new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
@@ -144,6 +159,7 @@
 
     },
     methods: {
+//     绿杠长度 确定点击事件
       optChange(index){
         let num = this.home.menus[index].menu_name.length
         this.greenAcross = 14 * num
@@ -280,6 +296,33 @@
         img
           width 100%
           height 100%
+    .fashion
+      width 100%
+      height 357px
+      .fashionHeader
+        padding-top 10px
+        padding-bottom 5px
+        box-sizing border-box
+        overflow hidden
+        width 100%
+        height height 88px
+        .leftFashion
+          float left
+          img
+            width 187.5px
+        .rightFashion
+          float right
+          width 120px
+          height 55px
+          text-align right
+          img
+            margin-right 0
+            width 60px
+            height 55px
+      .fashionVideo
+        position relative
+        width 100%
+        height 211px
     .stanceFooter
       width 100%
       height 145px

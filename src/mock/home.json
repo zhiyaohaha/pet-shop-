@@ -409,40 +409,38 @@
       "type": "104",
       "is_dynamic": "0",
       "type_name": "首页视频列表",
-      "value": [
-        {
-          "vid": "37",
-          "title": "P.L.A.Y. 摇摆漏食球 储存漏食一体 摇一摇美味漏出",
-          "time": "01:36",
-          "video_size": "11.86",
-          "link": "http://player.epetbar.com/3ff23e46ee694aecbb8537bc5b7e50e9/7880826fefd743298e0e257e77fc68a5-5287d2089db37e62345123a1be272f8b.mp4",
-          "visit": 117714,
-          "visit_img": {
-            "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
-            "img_size": "30x25"
-          },
-          "cover": {
+      "value": {
+        "vid": "37",
+        "title": "P.L.A.Y. 摇摆漏食球 储存漏食一体 摇一摇美味漏出",
+        "time": "01:36",
+        "video_size": "11.86",
+        "link": "http://player.epetbar.com/3ff23e46ee694aecbb8537bc5b7e50e9/7880826fefd743298e0e257e77fc68a5-5287d2089db37e62345123a1be272f8b.mp4",
+        "visit": 117714,
+        "visit_img": {
+          "image": "https://static.epetbar.com/static_web/wap/dist/images/views-gray.png",
+          "img_size": "30x25"
+        },
+        "cover": {
+          "image": "https://img1.epetbar.com/2017-12/31/19/046c7d4b61306d5f280a5c2597c14c67.jpg@!water",
+          "img_size": "750X421"
+        },
+        "cateid": "15",
+        "target": {
+          "epet_site": "epet",
+          "mode": "chao_video",
+          "param": "37"
+        },
+        "share_target": {
+          "mode": "shareto",
+          "param": {
+            "title": "P.L.A.Y. 摇摆漏食球 储存漏食一体 摇一摇美味漏出",
+            "content": "品质养宠·尽在E宠",
+            "url": "https://wap.epet.com/article/video/View.html?vid=37&fw=0",
             "image": "https://img1.epetbar.com/2017-12/31/19/046c7d4b61306d5f280a5c2597c14c67.jpg@!water",
-            "img_size": "750X421"
-          },
-          "cateid": "15",
-          "target": {
-            "epet_site": "epet",
-            "mode": "chao_video",
-            "param": "37"
-          },
-          "share_target": {
-            "mode": "shareto",
-            "param": {
-              "title": "P.L.A.Y. 摇摆漏食球 储存漏食一体 摇一摇美味漏出",
-              "content": "品质养宠·尽在E宠",
-              "url": "https://wap.epet.com/article/video/View.html?vid=37&fw=0",
-              "image": "https://img1.epetbar.com/2017-12/31/19/046c7d4b61306d5f280a5c2597c14c67.jpg@!water",
-              "types": "weixin,weixin_ring,qq,qzone,sina"
-            }
+            "types": "weixin,weixin_ring,qq,qzone,sina"
           }
         }
-      ]
+      }
     },
     {
       "index": "3",
