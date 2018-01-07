@@ -1,16 +1,18 @@
 <!--  -->
 <template>
   <div>
+    <router-view/>
     <!--头部-->
     <header class="homeHeader" v-if="home">
       <!--头部上-->
       <div class="clearFix">
         <div class="clearFixLeft">
-          <router-link to="/dog">
+          <router-link to="/homePage/dog">
             <span>狗狗站|</span>
             <span>成都</span>
             <i class="iconfont icon-daosanjiao"></i>
           </router-link>
+
         </div>
         <div class="clearFixMiddle">
           <!--<mt-search-->
@@ -211,7 +213,6 @@
 
     mounted(){
 //        发请求 和 滑动
-
       this.$store.dispatch('getHome', () => {
         this.$nextTick(() => {
           this.menuWrapper = new BScroll(this.$refs.menuWrapper, {scrollX: true, click: true,})
@@ -376,7 +377,7 @@
       margin-bottom 10px
     .experience
       width 100%
-      height 365px
+      height 250px
       margin-bottom 10px
       .experienceHeader
         padding-top 10px

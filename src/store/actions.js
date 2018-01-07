@@ -1,17 +1,24 @@
 import {
-  getHome
+  getHome,
+  getClassify
 }from "../api"
 export default {
-  getHome({commit},cb) {
+  async getHome({commit}, cb) {
     // debugger
-    getHome().then(response => {
-      const result = response.data  // {code:0, data: seller}
-      if (result.code === 0) {
-        const home = result.data
-        commit("GET_HOME", {home})
-        cb&&cb()
-      }
-    })
-  }
+    const result = await getHome()
+    if (result.code === 0) {
+      const home = result.data
+      commit("GET_HOME", {home})
+      cb && cb()
+    }
+  },
+  async getClassify({commit}, cb) {
+    const result = await getClassify()
+    if (result.code === 0) {
+      const classify = result.data
+      commit("GET_CLASSIFY", {classify})
+      cb && cb()
+    }
+  },
 }
 

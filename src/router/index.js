@@ -1,29 +1,44 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import classify from '../pages/classify/classify.vue'
-import homePage from '../pages/homePage/homePage.vue'
-import myPet from '../pages/myPet/myPet.vue'
-import shopC from '../pages/shopC/shopC.vue'
-import dog from '../pages/dog/dog.vue'
-
 Vue.use(Router)
+const homePage = () => import('../pages/homePage/homePage.vue')
+const classify = () => import('../pages/classify/classify.vue')
+const myPet = () => import('../pages/myPet/myPet.vue')
+const brand = () => import('../pages/brand/brand.vue')
+const shopC = () => import('../pages/shopC/shopC.vue')
+const dog = () => import('../pages/dog/dog.vue')
+const classifyPage = () => import('../pages/classifyPage/classifyPage.vue')
 
 export default new Router({
   routes: [
     {
-      path:"/",
-      redirect:"/homePage"
+      path: "/",
+      redirect: "/homePage"
     },
     {
       path: '/classify',
-      component: classify
+      component: classify,
+      children: [
+        {
+          path: "",
+          redirect: "classifyPage"
+        },
+        {
+          path: 'classifyPage',
+          component: classifyPage
+        },
+        {
+          path: 'brand',
+          component: brand
+        }
+      ]
     },
     {
       path: '/homePage',
       component: homePage,
-      children:[
+      children: [
         {
-          path:'dog',
+          path: 'dog',
           component: dog
         }
       ]
