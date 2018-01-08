@@ -1,8 +1,6 @@
 <template>
-  <span :endTime="endTime" :callback="callback" :endText="endText">
-    <slot>
+  <span :endTime="endTime" :endText="endText">
       {{content}}
-    </slot>
   </span>
 </template>
 <script>
@@ -21,22 +19,17 @@
         type : String,
         default:'已结束'
       },
-      callback : {
-        type : Function,
-      }
     },
     mounted () {
       this.countdowm(this.endTime)
     },
     methods: {
       countdowm(timestamp){
-        let self = this;
-        let timer = setInterval(function(){
+        let timer = setInterval(()=>{
           let nowTime = new Date();
           let endTime = new Date(timestamp * 1000);
           let t = endTime.getTime() - nowTime.getTime();
           if(t>0){
-            let day = Math.floor(t/86400000);
             let hour=Math.floor((t/3600000)%24);
             let min=Math.floor((t/60000)%60);
             let sec=Math.floor((t/1000)%60);
@@ -44,27 +37,18 @@
             min = min < 10 ? "0" + min : min;
             sec = sec < 10 ? "0" + sec : sec;
             let format = '';
-            if(day > 0){
+            if(hour > 0 ){
               format = `${hour}:${min}:${sec}`;
             }
-            if(day <= 0 && hour > 0 ){
-              format = `${hour}:${min}:${sec}`;
-            }
-            if(day <= 0 && hour <= 0){
+            if(hour <= 0){
               format =`${min}:${sec}`;
             }
-            self.content = format;
+            this.content = format;
           }else{
             clearInterval(timer);
-            self.content = self.endText;
-            self._callback();
+            this.content = this.endText;
           }
         },1000);
-      },
-      _callback(){
-        if(this.callback && this.callback instanceof Function){
-          this.callback(...this);
-        }
       }
     }
   }

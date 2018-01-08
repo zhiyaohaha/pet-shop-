@@ -62,10 +62,8 @@
         return this.home && this.home.datas[4]
       },
       countDown(){
-        let time = (new Date()).valueOf()
         let msd = this.everydayInsane.time
-        let timeDifference = time - msd * 1000
-        return timeDifference * 100 + ""
+        return msd * 10 + ""
       }
     },
     watch: {
