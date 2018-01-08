@@ -63,7 +63,7 @@
       },
       countDown(){
         let msd = this.everydayInsane.time
-        return msd * 10 + ""
+        return msd * 1.1 + ""
       }
     },
     watch: {

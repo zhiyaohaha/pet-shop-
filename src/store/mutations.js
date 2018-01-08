@@ -6,4 +6,7 @@ export default {
   GET_CLASSIFY(state,{classify}){
     state.classify = classify
   },
+  GET_BRAND(state,{brands}){
+    state.brands = brands
+  },
 }

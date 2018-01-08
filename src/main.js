@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import {Search, Swipe, SwipeItem } from 'mint-ui';
+import {Search, Swipe, SwipeItem } from 'mint-ui'
 import store from './store'
 import "../static/reset.css"
 import "./mock/mockServer"

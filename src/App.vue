@@ -50,8 +50,7 @@
     },
 
     mounted(){
-        let time1 = new Date()
-      console.log(time1.getTime())
+
     },
 
     methods: {}

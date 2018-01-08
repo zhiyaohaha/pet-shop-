@@ -51,6 +51,7 @@ export default {
     height 40px
     box-sizing border-box
     border-bottom 1px solid #ccc
+    background-color #fff
     padding 0 15px
     z-index 1
     .classifyPage,.brand
