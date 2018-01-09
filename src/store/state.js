@@ -1,5 +1,6 @@
 export default {
   home:null,
   classify:null,
-  brands:null
+  brands:null,
+  users:null
 }

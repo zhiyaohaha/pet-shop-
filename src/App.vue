@@ -18,14 +18,14 @@
         </router-link>
       </div>
       <div class="tabItem">
-        <router-link to="/myPet">
+        <router-link to="/shopC">
           <span class="iconfont icon-gouwuche"></span>
           <br>
           <span>购物车</span>
         </router-link>
       </div>
       <div class="tabItem">
-        <router-link to="/shopC">
+        <router-link to="/myPet">
           <span class="iconfont icon-morentupian_xiaolian"></span>
           <br>
           <span>我的E宠</span>

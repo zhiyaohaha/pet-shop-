@@ -9,4 +9,7 @@ export default {
   GET_BRAND(state,{brands}){
     state.brands = brands
   },
+  GET_USERS(state,{users}){
+    state.users = users
+  },
 }

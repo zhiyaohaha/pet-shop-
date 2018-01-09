@@ -22,9 +22,9 @@
           <input type="search" placeholder="请输入" class="iconfont icon-sousuo">
         </div>
         <div class="clearFixRight">
-          <a href="https://wap.epet.com/wappms/pms.html?fw=0">
+          <router-link to="/myPet">
             <img src="//static.epetbar.com/static_web/wap/src/images/mydope.png">
-          </a>
+          </router-link>
         </div>
       </div>
       <!--头部下-->

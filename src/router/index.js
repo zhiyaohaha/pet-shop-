@@ -8,6 +8,9 @@ const brand = () => import('../pages/brand/brand.vue')
 const shopC = () => import('../pages/shopC/shopC.vue')
 const dog = () => import('../pages/dog/dog.vue')
 const classifyPage = () => import('../pages/classifyPage/classifyPage.vue')
+// const dynamic = () => import('../pages/dynamic/dynamic.vue')
+// const ordinary = () => import('../pages/ordinary/ordinary.vue')
+const register = () => import('../pages/register/register.vue')
 
 export default new Router({
   routes: [
@@ -45,11 +48,25 @@ export default new Router({
     },
     {
       path: '/myPet',
-      component: myPet
+      component: myPet,
+      /*children: [
+        {
+          path: 'ordinary',
+          component: ordinary
+        },
+        {
+          path: 'dynamic',
+          component: dynamic
+        }
+      ]*/
     },
     {
       path: '/shopC',
       component: shopC
+    },
+    {
+      path: '/register',
+      component: register
     }
   ]
 })

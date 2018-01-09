@@ -1,7 +1,8 @@
 import {
   getHome,
   getClassify,
-  getBrand
+  getBrand,
+  getUsers
 }from "../api"
 export default {
   async getHome({commit}, cb) {
@@ -29,5 +30,14 @@ export default {
       cb && cb()
     }
   },
+  async getUsers({commit}, cb) {
+    const result = await getUsers()
+    if (result.code === 0) {
+      const users = result.data
+      commit("GET_USERS", {users})
+      cb && cb()
+    }
+  },
+
 }
 
